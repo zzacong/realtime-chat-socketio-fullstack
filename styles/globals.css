@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
