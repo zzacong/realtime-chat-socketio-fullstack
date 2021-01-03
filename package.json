@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node lib/index.js",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel src -d lib"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,10 @@
     "socket.io": "^3.0.4"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "nodemon": "^2.0.6"
   }
 }
