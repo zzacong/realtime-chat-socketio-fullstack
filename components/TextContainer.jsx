@@ -12,7 +12,7 @@ export default function TextContainer({ users }) {
           </span>
         </h1>
         <h3>
-          Created with React, Express, Node and Socket.IO{' '}
+          Created with Next.js, Express, Node and Socket.io{' '}
           <span role="img" aria-label="emoji">
             ❤️
           </span>
