@@ -17,8 +17,9 @@ export default function Chat() {
   const [messages, setMessages] = useState([])
   const router = useRouter()
 
+  // http://localhost:5000
   useEffect(() => {
-    socket = io('http://localhost:5000')
+    socket = io('https://realtime-chat-socketio-server.herokuapp.com')
 
     const { name, room } = router.query
     setName(name)
