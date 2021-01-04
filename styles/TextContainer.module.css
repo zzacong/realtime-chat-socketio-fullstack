@@ -1,0 +1,38 @@
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  color: #333;
+  height: 60%;
+  justify-content: space-between;
+}
+
+.textContainer h1 {
+  margin-bottom: 0px;
+}
+
+.activeContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50%;
+}
+
+.list {
+  list-style: none;
+}
+
+.activeItem {
+  display: flex;
+  align-items: center;
+}
+
+.activeItem h3 {
+  margin: 8px 0;
+  margin-right: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  .textContainer {
+    display: none;
+  }
+}
