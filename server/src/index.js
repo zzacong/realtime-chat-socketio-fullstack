@@ -19,10 +19,7 @@ allowedOrigins = allowedOrigins?.includes?.(',')
 
 const io = new Server(server, {
   cors: {
-    origin: [
-      'http://localhost:3000',
-      'https://realtime-chat-socketio-client.vercel.app',
-    ],
+    origin: allowedOrigins,
     methods: ['GET', 'POST'],
     credentials: true,
   },
@@ -85,7 +82,7 @@ io.on('connection', socket => {
   })
 })
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5001
 server.listen(PORT, () =>
   console.log(`Server is listening on http://localhost:${PORT}`)
 )
