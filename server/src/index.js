@@ -13,7 +13,7 @@ const server = createServer(app)
 app.use(router)
 
 let allowedOrigins = process.env.ALLOWED_ORIGINS
-allowedOrigins = Array.isArray(allowedOrigins)
+allowedOrigins = allowedOrigins?.includes?.(',')
   ? allowedOrigins.split(',')
   : allowedOrigins ?? 'http://localhost:3000'
 
