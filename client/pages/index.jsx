@@ -19,7 +19,7 @@ export default function Home() {
           <h1 className={styles.heading}>Join</h1>
           <div>
             <input
-              placeholder=""
+              placeholder="Username"
               className={styles.joinInput}
               type="text"
               onChange={e => setName(e.target.value)}
@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           <div>
             <input
-              placeholder=""
+              placeholder="Room"
               className={styles.joinInput}
               type="text"
               onChange={e => setRoom(e.target.value)}
