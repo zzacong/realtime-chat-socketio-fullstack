@@ -1,14 +1,21 @@
 import express from 'express'
 import { createServer } from 'http'
 import { Server } from 'socket.io'
+import { config as dotenv } from 'dotenv'
 
 import { router } from './router'
 import { addUser, removeUser, getUser, getUsersInRoom } from './user'
 
+if (process.env.NODE_ENV !== 'production') dotenv()
 const app = express()
 const server = createServer(app)
 
 app.use(router)
+
+let allowedOrigins = process.env.ALLOWED_ORIGINS
+allowedOrigins = Array.isArray(allowedOrigins)
+  ? allowedOrigins.split(',')
+  : allowedOrigins ?? 'http://localhost:3000'
 
 const io = new Server(server, {
   cors: {
