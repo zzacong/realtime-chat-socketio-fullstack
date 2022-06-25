@@ -2,11 +2,11 @@ import express from 'express'
 import { createServer } from 'http'
 import { Server } from 'socket.io'
 import { config as dotenv } from 'dotenv'
+dotenv()
 
 import { router } from './router'
 import { addUser, removeUser, getUser, getUsersInRoom } from './user'
 
-if (process.env.NODE_ENV !== 'production') dotenv()
 const app = express()
 const server = createServer(app)
 
