@@ -11,14 +11,12 @@ export default function InfoBar({ room }) {
       </div>
       <div className={styles.rightInnerContainer}>
         <Link href="/">
-          <a>
             <Image
               src="/closeIcon.png"
               alt="close icon"
               width={10}
               height={10}
             />
-          </a>
         </Link>
       </div>
     </div>
