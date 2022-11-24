@@ -83,6 +83,7 @@ io.on('connection', socket => {
 })
 
 const PORT = process.env.PORT || 5001
-server.listen(PORT, () =>
+server.listen(PORT, () => {
+  console.log('🚀 ~ file: index.js ~ line 16 ~ allowedOrigins', allowedOrigins)
   console.log(`Server is listening on http://localhost:${PORT}`)
-)
+})
